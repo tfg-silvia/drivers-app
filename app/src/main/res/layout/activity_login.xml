@@ -12,10 +12,10 @@
     tools:context=".ui.login.LoginActivity">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/dni"
         android:layout_width="379dp"
         android:layout_height="43dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="17dp"
         android:autofillHints="@string/prompt_dni"
         android:ems="10"
         android:hint="@string/prompt_dni"
@@ -24,26 +24,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="10dp"
         android:autofillHints="@string/prompt_username"
         android:hint="@string/prompt_username"
         android:inputType="text"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/dni" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:autofillHints="@string/prompt_password"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
@@ -82,5 +82,45 @@
         app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User" />
+
+        <TextView
+            android:id="@+id/textStaff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Staff" />
+
+        <TextView
+            android:id="@+id/textAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

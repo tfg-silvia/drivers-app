@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        /*setContentView(R.layout.activity_main)
 
         val tl = findViewById<View>(R.id.main_table) as TableLayout
 
@@ -25,6 +25,6 @@ class MainActivity : AppCompatActivity() {
         tr_head.layoutParams = LayoutParams(
             LayoutParams.MATCH_PARENT,
             LayoutParams.WRAP_CONTENT
-        )
+        )*/
     }
 }
